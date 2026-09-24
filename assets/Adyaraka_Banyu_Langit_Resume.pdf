@@ -1,0 +1,93 @@
+%PDF-1.4
+%����
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R /F1I 6 0 R >> >> /Contents 7 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic >>
+endobj
+7 0 obj
+<< /Length 4599 >>
+stream
+BT /F2 22 Tf 1 0 0 1 175 800 Tm (Adyaraka Banyu Langit) Tj ET
+BT /F1 7 Tf 1 0 0 1 105 784 Tm (+866 968-135-106 | adyaraka.cs15@nycu.edu.tw | linkedin.com/in/adyaraka | github.com/valleysonata) Tj ET
+BT /F1 8 Tf 1 0 0 1 40 766 Tm (EDUCATION) Tj ET
+0.4 w 40 760 m 555 760 l S
+BT /F2 9 Tf 1 0 0 1 40 751 Tm (National Yang Ming Chiao Tung University) Tj ET
+BT /F1 7 Tf 1 0 0 1 445 751 Tm (Hsinchu, Taiwan) Tj ET
+BT /F1I 7 Tf 1 0 0 1 40 742 Tm (Bachelor of Science in Computer Science) Tj ET
+BT /F1I 7 Tf 1 0 0 1 455 742 Tm (Sep. 2026 - Jun. 2030) Tj ET
+BT /F1 7 Tf 1 0 0 1 48 733 Tm (• Honors/Awards: NYCU International Student Scholarship) Tj ET
+BT /F2 9 Tf 1 0 0 1 40 721 Tm (Rosedale Global High School) Tj ET
+BT /F1 7 Tf 1 0 0 1 455 721 Tm (Markham, Ontario) Tj ET
+BT /F1I 7 Tf 1 0 0 1 40 712 Tm (Ontario Secondary School Diploma \(OSSD\)) Tj ET
+BT /F1I 7 Tf 1 0 0 1 455 712 Tm (Aug. 2023 - May 2026) Tj ET
+BT /F1 7 Tf 1 0 0 1 48 703 Tm (• Honors/Awards: Ontario Scholar Award) Tj ET
+BT /F1 8 Tf 1 0 0 1 40 685 Tm (EXPERIENCE) Tj ET
+0.4 w 40 650 m 555 650 l S
+BT /F2 9 Tf 1 0 0 1 40 670 Tm (Research & Data Analyst) Tj ET
+BT /F1 7 Tf 1 0 0 1 445 670 Tm (Jan. 2024 - Jan. 2025) Tj ET
+BT /F1I 7 Tf 1 0 0 1 40 661 Tm (Work Coffee Indonesia) Tj ET
+BT /F1I 7 Tf 1 0 0 1 475 661 Tm (Jakarta, Indonesia) Tj ET
+BT /F1 7 Tf 1 0 0 1 48 652 Tm (• Built a Python data pipeline \(pandas, NumPy, SciPy\) to clean and analyze 13 months of daily) Tj ET
+BT /F1 7 Tf 1 0 0 1 48 644 Tm (  waste records \(N = 396\) across 5 operational streams.) Tj ET
+BT /F1 7 Tf 1 0 0 1 48 636 Tm (• Identified a 65% waste reduction trend \(from 28.14 kg/day to 9.80 kg/day\) by analyzing) Tj ET
+BT /F1 7 Tf 1 0 0 1 48 628 Tm (  central tendency and distribution skewness as operations stabilized.) Tj ET
+BT /F1 7 Tf 1 0 0 1 48 620 Tm (• Uncovered category ties via Pearson correlation \(r = 0.659\) and proved no weekend-vs-) Tj ET
+BT /F1 7 Tf 1 0 0 1 48 612 Tm (  weekday variance using a non-parametric Kruskal-Wallis test \(p = 0.903\).) Tj ET
+BT /F1 7 Tf 1 0 0 1 48 604 Tm (• First author of "Quantitative Analysis of Coffee Shop Operational Waste Using Python,") Tj ET
+BT /F1 7 Tf 1 0 0 1 48 596 Tm (  published in COMSERVA: Journal of Scientific Research, Vol. 6, No. 3. DOI: 10.59141/comserva.v6i7.3590) Tj ET
+BT /F1 8 Tf 1 0 0 1 40 580 Tm (PERSONAL PROJECTS) Tj ET
+0.4 w 40 500 m 555 500 l S
+BT /F2 7 Tf 1 0 0 1 40 565 Tm (FaceVox | Python, MediaPipe, PyTorch, scikit-learn) Tj ET
+BT /F1 7 Tf 1 0 0 1 445 565 Tm (2026 - Present) Tj ET
+BT /F1 7 Tf 1 0 0 1 48 556 Tm (• Built an assistive facial expression recognition system using 478 MediaPipe face landmarks.) Tj ET
+BT /F1 7 Tf 1 0 0 1 48 548 Tm (• Mapped real-time facial expressions directly to core communication intents \(YES, NO, HELP, PAIN\).) Tj ET
+BT /F1 7 Tf 1 0 0 1 48 540 Tm (• Evaluated classification accuracy across Random Forest, Gradient Boosting, and Transformer models.) Tj ET
+BT /F2 7 Tf 1 0 0 1 40 528 Tm (Personal Portfolio | HTML5, CSS3, JavaScript, Groq AI, Cloudflare Workers) Tj ET
+BT /F1 7 Tf 1 0 0 1 445 528 Tm (2026 - Present) Tj ET
+BT /F1 7 Tf 1 0 0 1 48 519 Tm (• Created a browser-based macOS Sequoia-inspired desktop environment as an interactive personal portfolio.) Tj ET
+BT /F1 7 Tf 1 0 0 1 48 511 Tm (• Integrated functional web apps including Terminal, Safari, Spotify, Finder, VS Code, and Launchpad.) Tj ET
+BT /F1 7 Tf 1 0 0 1 48 503 Tm (• Engineered a modular window manager, responsive layouts, and a custom AI chat agent.) Tj ET
+BT /F1 8 Tf 1 0 0 1 40 487 Tm (TECHNICAL SKILLS) Tj ET
+0.4 w 40 380 m 555 380 l S
+BT /F1 7 Tf 1 0 0 1 40 472 Tm (Languages: Python, C, SQL, HTML5/CSS3, JavaScript) Tj ET
+BT /F1 7 Tf 1 0 0 1 40 464 Tm (Machine Learning & Data: PyTorch, MediaPipe, scikit-learn, pandas, NumPy, SciPy, Matplotlib, Seaborn) Tj ET
+BT /F1 7 Tf 1 0 0 1 40 456 Tm (AI & Systems: Generative AI, RAG Architectures, Autonomous Agents, Prompt Engineering, MLOps) Tj ET
+BT /F1 7 Tf 1 0 0 1 40 448 Tm (Tools & Environments: Git, GitHub, VS Code, Jupyter Notebook, Cloudflare Workers, Groq API, Microsoft Excel) Tj ET
+BT /F1 8 Tf 1 0 0 1 40 432 Tm (CERTIFICATIONS) Tj ET
+0.4 w 40 330 m 555 330 l S
+BT /F1 7 Tf 1 0 0 1 40 417 Tm (IELTS Academic: Overall Band 7.5) Tj ET
+BT /F1 7 Tf 1 0 0 1 40 409 Tm (Alibaba Cloud Academy: Generative AI, Prompt Engineering, ML/DL, GPU ECS, PAI Platform, RAG & Agents) Tj ET
+BT /F1 7 Tf 1 0 0 1 40 401 Tm (HackerRank: SQL Basic Certification \(Joins, Subqueries, Query Optimization\)) Tj ET
+BT /F1 7 Tf 1 0 0 1 40 393 Tm (HP LIFE: Data Science & Analytics Certification) Tj ET
+
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000268 00000 n 
+0000000340 00000 n 
+0000000411 00000 n 
+0000000484 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+5135
+%%EOF
