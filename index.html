@@ -52,7 +52,8 @@
       overflow:visible;
     }
     .hero-text{position:relative; z-index:2}
-    .np-embed{display:block; width:320px; max-width:100%; height:140px; border:0; border-radius:12px; margin:24px 0 0}
+    .np-embed-wrap{display:block; width:257px; height:122px; margin:24px 0 0}
+    .np-embed{display:block; width:320px; height:152px; border:0; border-radius:12px; background:#000; transform:scale(0.8026); transform-origin:top left}
     @media(min-width:701px){ .hero-text{top:-68px; transform:scale(1.25); transform-origin:left center} .hero-bh{top:-68px} }
     @media(max-width:700px){
       .hero{grid-template-columns:1fr 160px; gap:20px 20px; padding-top:56px}
@@ -348,14 +349,6 @@
       background:rgba(255,255,255,0.03);
       border-radius:16px;
       overflow:hidden;
-      backdrop-filter:blur(8px);
-      -webkit-backdrop-filter:blur(8px);
-      transition:border-color .22s ease, background .22s ease, transform .22s ease;
-    }
-    .project-card:hover{
-      border-color:rgba(255,255,255,0.14);
-      background:rgba(255,255,255,0.05);
-      transform:translateY(-2px);
     }
     .card-media{
       height:168px;
@@ -433,7 +426,6 @@
       opacity:0;
       transform:translateY(18px);
       transition:opacity .65s ease, transform .65s cubic-bezier(.16,1,.3,1);
-      will-change:transform, opacity;
     }
     .reveal.in{
       opacity:1;
@@ -456,8 +448,6 @@
       border:1px solid rgba(255,255,255,0.10);
       border-radius:999px;
       color:#fff;
-      backdrop-filter:blur(10px);
-      -webkit-backdrop-filter:blur(10px);
       opacity:0.72;
       cursor:pointer;
       user-select:none;
@@ -552,7 +542,7 @@
           <p class="prose">
             I'm a Computer Science student at <strong>National Yang Ming Chiao Tung University (NYCU)</strong>. Building assistive ML systems, lightweight AI agents, and web engineering tools.
           </p>
-          <iframe class="np-embed" src="https://open.spotify.com/embed/track/7o2AeQZzfCERsRmOM86EcB?utm_source=generator" width="320" height="140" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Xtal — Aphex Twin"></iframe>
+          <div class="np-embed-wrap"><iframe class="np-embed" src="https://open.spotify.com/embed/track/7o2AeQZzfCERsRmOM86EcB?utm_source=generator" width="320" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Xtal — Aphex Twin"></iframe></div>
         </div>
                 <img class="ascii-art-img" src="assets/ascii-art.svg" alt="" aria-hidden="true" draggable="false" />
       </div>
