@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adyaraka Banyu Langit ΓÇö Systems & AI Engineer</title>
-  <meta name="description" content="Adyaraka Banyu Langit ΓÇö CS @ NYCU ┬╖ Systems & AI Engineer.">
+  <title>Adyaraka Banyu Langit — Systems & AI Engineer</title>
+  <meta name="description" content="Adyaraka Banyu Langit — CS @ NYCU · Systems & AI Engineer.">
   <meta name="color-scheme" content="dark">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23030303'/%3E%3Ccircle cx='8' cy='8' r='3' fill='black' stroke='white' stroke-opacity='0.2' stroke-width='0.7'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,14 +33,14 @@
     ::selection{background:rgba(255,255,255,0.14)}
 
     .wrap{
-      max-width:720px;
+      max-width:1080px;
       margin:0 auto;
-      padding:0 24px;
+      padding:0 32px;
       position:relative;
     }
-    @media(max-width:640px){ .wrap{padding:0 20px} }
+    @media(max-width:1100px){.wrap{max-width:960px}} @media(max-width:860px){.wrap{max-width:720px}} @media(max-width:640px){ .wrap{padding:0 20px} }
 
-    /* hero ΓÇö name + black hole side by side */
+    /* hero — name + black hole side by side */
     .hero{
       display:grid;
       grid-template-columns:1fr 220px;
@@ -52,6 +52,7 @@
       overflow:visible;
     }
     .hero-text{position:relative; z-index:2}
+    @media(min-width:701px){ .hero-text{top:32px} .hero-bh{top:32px} }
     @media(max-width:700px){
       .hero{grid-template-columns:1fr 160px; gap:20px 20px; padding-top:56px}
     }
@@ -67,7 +68,7 @@
       letter-spacing:-0.04em;
       color:var(--text);
     }
-    .hero-name span{
+    .hero-name .eyebrow{
       display:block;
       font-weight:600;
       font-size:0.58em;
@@ -75,6 +76,7 @@
       color:var(--muted);
       margin-bottom:6px;
     }
+    .hero-name .nm{display:block; margin-left:-0.25em}
     .hero-sub{
       margin:14px 0 0;
       font-size:13.5px;
@@ -177,7 +179,7 @@
       grid-column:1 / -1;
     }
 
-    /* black hole ΓÇö enlarged, blended into bg (not circled) */
+    /* black hole — enlarged, blended into bg (not circled) */
     .hero-bh{
       position:relative;
       width:480px;
@@ -187,7 +189,7 @@
       pointer-events:none;
       background:transparent;
       overflow:visible;
-      margin:-40px -60px -40px 0;
+      margin:-40px -30px -40px 0;
       justify-self:end;
       align-self:center;
       user-select:none;
@@ -226,7 +228,7 @@
       pointer-events:none;
     }
 
-    /* sections ΓÇö plain */
+    /* sections — plain */
     section{padding:32px 0 0}
     section.status{padding-top:96px}
     .bio-header{
@@ -337,7 +339,7 @@
     .project-links a{border-bottom:1px solid var(--border); padding-bottom:1px}
     .project-links a:hover{color:var(--text); border-bottom-color:var(--text)}
 
-    /* projects ΓÇö new card layout (3 vertical boxes) */
+    /* projects — new card layout (3 vertical boxes) */
     .projects-grid{border-top:1px solid var(--border)}
     .project-card{
       display:block;
@@ -438,7 +440,7 @@
     }
     @media(prefers-reduced-motion:reduce){ .reveal{opacity:1; transform:none; transition:none} }
 
-    /* scroll hint ΓÇö bouncing minimalist pointer */
+    /* scroll hint — bouncing minimalist pointer */
     .scroll-hint{
       position:fixed;
       left:50%;
@@ -496,7 +498,7 @@
   <div class="wrap">
     <header class="hero reveal">
       <div class="hero-text">
-        <h1 class="hero-name"><span>Hi I'm,</span> Adyaraka.</h1>
+        <h1 class="hero-name"><span class="eyebrow">Hi I'm,</span><span class="nm">Adyaraka.</span></h1>
         <p class="hero-sub">Computer Science @ NYCU</p>
         <nav class="hero-links" aria-label="Quick links">
           <a href="https://github.com/valleysonata" target="_blank" rel="noreferrer" aria-label="GitHub">
@@ -557,7 +559,7 @@
 
 
     <footer class="reveal">
-      <div>┬⌐ <span id="year"></span> Adyaraka Banyu Langit</div>
+      <div>© <span id="year"></span> Adyaraka Banyu Langit</div>
     </footer>
   </div>
 
@@ -566,7 +568,8 @@
   </button>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const yearEl = document.getElementById('year');
+    if(yearEl) yearEl.textContent = new Date().getFullYear();
     const bhVideo = document.querySelector('.hero-bh video');
     if(bhVideo){
       bhVideo.addEventListener('contextmenu', e=>e.preventDefault());
@@ -590,8 +593,8 @@
       el.style.transitionDelay = `${Math.min(i*70, 220)}ms`;
       obs.observe(el);
     });
-    // primary nav ΓÇö static per-page (separate pages), no observer needed
-    // macOS nav sliding highlight ΓÇö super smooth + delayed
+    // primary nav — static per-page (separate pages), no observer needed
+    // macOS nav sliding highlight — super smooth + delayed
     const hl = document.getElementById('mac-highlight');
     const ml = document.getElementById('mac-links');
     if(hl && ml){
