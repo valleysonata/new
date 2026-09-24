@@ -568,6 +568,8 @@
   </button>
 
   <script>
+    if('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo({top:0, left:0, behavior:'instant'});
     const yearEl = document.getElementById('year');
     if(yearEl) yearEl.textContent = new Date().getFullYear();
     const bhVideo = document.querySelector('.hero-bh video');
@@ -623,23 +625,27 @@
     const hint = document.getElementById('scroll-hint');
     if(hint){
       let hidden = false;
+      let touched = false;
+      ['wheel','touchstart','touchmove','mousedown','keydown'].forEach(ev=>
+        window.addEventListener(ev, ()=>{ touched = true; }, {passive:true, capture:true})
+      );
       const hide = ()=>{
         if(hidden) return;
         hidden = true;
         hint.classList.add('hidden');
         setTimeout(()=> hint.remove(), 500);
         window.removeEventListener('scroll', onHintScroll);
-        window.removeEventListener('wheel', onHintScroll);
-        window.removeEventListener('touchmove', onHintScroll);
       };
       hint.addEventListener('click', ()=>{
         window.scrollTo({top: document.documentElement.scrollHeight, behavior:'smooth'});
       });
-      const onHintScroll = ()=>{ if(window.scrollY > 24) hide(); };
+      let early = true;
+      window.addEventListener('load', ()=> setTimeout(()=>{ early = false; }, 4000));
+      const onHintScroll = ()=>{
+        if(touched){ if(window.scrollY > 24) hide(); }
+        else if(early && window.scrollY > 0){ window.scrollTo({top:0, left:0, behavior:'instant'}); }
+      };
       window.addEventListener('scroll', onHintScroll, {passive:true});
-      window.addEventListener('wheel', onHintScroll, {passive:true});
-      window.addEventListener('touchmove', onHintScroll, {passive:true});
-      setTimeout(()=>{ if(window.scrollY <= 24 && !hidden) hint.style.opacity = '0.42'; }, 4200);
     }
   </script>
 </body>
