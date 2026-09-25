@@ -56,29 +56,11 @@
     .np-embed-wrap{display:block; width:257px; height:122px; margin:24px 0 0}
     .np-embed{display:block; width:320px; height:152px; border:0; border-radius:12px; background:#000; transform:scale(0.8026); transform-origin:top left}
     @media(min-width:701px){ .hero-text{top:-68px; transform:scale(1.25); transform-origin:left center} .hero-bh{top:-68px} }
-    @media(max-width:700px){
-      .wrap{display:flex; flex-direction:column}
-      .mac-nav{order:-1; margin:12px auto 0 !important; position:sticky; top:12px; z-index:50; max-width:fit-content}
-      .mac-links{display:flex; flex-direction:row}
-      .hero{grid-template-columns:1fr; gap:16px 0; padding:16px 0 8px; min-height:0; align-items:start; justify-items:center}
-      .hero-text{display:flex; flex-direction:column; align-items:center; text-align:center}
-      .hero-name{font-size:clamp(30px,8.5vw,38px); text-align:center; white-space:nowrap}
-      .hero-name .eyebrow{display:inline; color:var(--text)}
-      .hero-name .nm{display:inline}
-      .hero-sub{text-align:center; font-size:16.5px}
-      .hero-links{order:-1; justify-content:center; margin:2px 0 16px}
-      .hero-links a{width:60px; height:60px; border-radius:16px}
-      .hero-links a svg{width:22px; height:22px}
-      .hero-bh{order:-1; position:relative; right:auto; top:auto; width:min(88vw,380px); height:min(88vw,380px); margin:0 auto; justify-self:center}
-      .hero-rule{display:none}
-      .status{display:none}
-      .scroll-hint{display:none}
-      footer{justify-content:center; text-align:center}
-    }
     @media(max-width:520px){
       .status{display:none}
       .scroll-hint{display:none}
     }
+    /* (mobile overrides live at end of stylesheet so they win ties) */
     .hero-name{
       margin:0;
       font-family:'Inter', system-ui, sans-serif;
@@ -216,12 +198,7 @@
       -webkit-user-select:none;
       -webkit-user-drag:none;
     }
-    @media(max-width:700px){
-      .hero-bh{order:-1; position:relative; right:auto; top:auto; width:min(88vw,380px); height:min(88vw,380px); margin:0 auto; justify-self:center}
-    }
-    @media(max-width:520px){
-      .hero-bh{order:-1; position:relative; right:auto; top:auto; width:min(88vw,360px); height:min(88vw,360px); margin:0 auto; justify-self:center; opacity:1}
-    }
+    /* (mobile .hero-bh sizing lives in the mobile block at end of stylesheet) */
     .hero-bh video{will-change:transform;contain:paint;
       width:100%;
       height:100%;
@@ -490,6 +467,30 @@
       50%{ transform:translateX(-50%) translateY(6px) }
     }
     @media(prefers-reduced-motion:reduce){ .scroll-hint{animation:none} }
+    @media(max-width:700px){
+      .wrap{display:flex; flex-direction:column}
+      .mac-nav{order:-1; margin:12px auto 0 !important; position:sticky; top:12px; z-index:50; max-width:fit-content}
+      .mac-links{display:flex; flex-direction:row}
+      .hero{grid-template-columns:1fr; gap:16px 0; padding:8px 0 8px; min-height:0; align-items:start; justify-items:center}
+      .hero-text{display:flex; flex-direction:column; align-items:center; text-align:center}
+      .hero-name{font-size:clamp(32px,9vw,40px); text-align:center; white-space:nowrap}
+      .hero-name .eyebrow{display:inline; color:var(--text)}
+      .hero-name .nm{display:inline}
+      .hero-sub{text-align:center; font-size:17px}
+      .hero-links{order:-1; justify-content:center; margin:2px 0 16px}
+      .hero-links a{width:60px; height:60px; border-radius:16px}
+      .hero-links a svg{width:22px; height:22px}
+      .hero-bh{order:-1; position:relative; right:auto; top:auto; width:min(88vw,380px); height:min(88vw,380px); margin:0 auto; justify-self:center; opacity:1}
+      .hero-rule{display:none}
+      .status{display:none}
+      .scroll-hint{display:none}
+      footer{justify-content:center; text-align:center}
+    }
+    @media(max-width:520px){
+      .hero-bh{width:min(88vw,360px); height:min(88vw,360px)}
+      .status{display:none}
+      .scroll-hint{display:none}
+    }
     a:focus-visible{outline:1px solid rgba(255,255,255,0.5); outline-offset:3px}
   </style>
 </head>
