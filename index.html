@@ -58,20 +58,18 @@
     @media(min-width:701px){ .hero-text{top:-68px; transform:scale(1.25); transform-origin:left center} .hero-bh{top:-68px} }
     @media(max-width:700px){
       .wrap{display:flex; flex-direction:column}
-      .mac-nav{order:-1; margin:12px 0 0 !important; position:sticky; top:12px; z-index:50; max-width:none; width:100%; flex-wrap:wrap; padding:12px 18px; border-radius:20px; background:rgba(15,20,32,0.72)}
-      .mac-highlight{display:none}
-      .mac-menu-btn{display:flex; align-items:center; justify-content:space-between; width:100%; background:none; border:none; padding:4px 2px; color:#cbd5e1; font-family:'Inter',system-ui,sans-serif; font-size:15px; font-weight:500; cursor:pointer}
-      .mac-menu-btn svg{width:26px; height:26px; stroke:currentColor; fill:none; stroke-width:1.8; stroke-linecap:round; display:block}
-      .mac-links{display:none; width:100%; flex-direction:column; gap:2px; margin-top:8px}
-      .mac-nav.open .mac-links{display:flex}
-      .mac-links a{padding:10px 12px}
-      .hero{grid-template-columns:1fr; gap:20px 0; padding:28px 0 8px; min-height:0; align-items:start; justify-items:center}
+      .mac-nav{order:-1; margin:12px auto 0 !important; position:sticky; top:12px; z-index:50; max-width:fit-content}
+      .mac-links{display:flex; flex-direction:row}
+      .hero{grid-template-columns:1fr; gap:16px 0; padding:16px 0 8px; min-height:0; align-items:start; justify-items:center}
       .hero-text{display:flex; flex-direction:column; align-items:center; text-align:center}
-      .hero-name{font-size:clamp(46px,12.5vw,58px); text-align:center}
-      .hero-sub{text-align:center}
-      .hero-links{order:-1; justify-content:center; margin:2px 0 18px}
-      .hero-links a{width:52px; height:52px; border-radius:14px}
-      .hero-bh{order:-1; position:relative; right:auto; top:auto; width:min(78vw,330px); height:min(78vw,330px); margin:0 auto; justify-self:center}
+      .hero-name{font-size:clamp(30px,8.5vw,38px); text-align:center; white-space:nowrap}
+      .hero-name .eyebrow{display:inline; color:var(--text)}
+      .hero-name .nm{display:inline}
+      .hero-sub{text-align:center; font-size:16.5px}
+      .hero-links{order:-1; justify-content:center; margin:2px 0 16px}
+      .hero-links a{width:60px; height:60px; border-radius:16px}
+      .hero-links a svg{width:22px; height:22px}
+      .hero-bh{order:-1; position:relative; right:auto; top:auto; width:min(88vw,380px); height:min(88vw,380px); margin:0 auto; justify-self:center}
       .hero-rule{display:none}
       .status{display:none}
       .scroll-hint{display:none}
@@ -105,7 +103,6 @@
       color:var(--muted);
       font-weight:400;
     }
-    .mac-menu-btn{display:none}
     .mac-nav{
       margin-top:36px;
       display:flex;
@@ -220,10 +217,10 @@
       -webkit-user-drag:none;
     }
     @media(max-width:700px){
-      .hero-bh{order:-1; position:relative; right:auto; top:auto; width:min(78vw,330px); height:min(78vw,330px); margin:0 auto; justify-self:center}
+      .hero-bh{order:-1; position:relative; right:auto; top:auto; width:min(88vw,380px); height:min(88vw,380px); margin:0 auto; justify-self:center}
     }
     @media(max-width:520px){
-      .hero-bh{order:-1; position:relative; right:auto; top:auto; width:min(84vw,300px); height:min(84vw,300px); margin:0 auto; justify-self:center; opacity:1}
+      .hero-bh{order:-1; position:relative; right:auto; top:auto; width:min(88vw,360px); height:min(88vw,360px); margin:0 auto; justify-self:center; opacity:1}
     }
     .hero-bh video{will-change:transform;contain:paint;
       width:100%;
@@ -539,7 +536,6 @@
 
     <nav class="mac-nav reveal" aria-label="Primary" style="margin-top:72px">
       <div class="mac-highlight" id="mac-highlight" aria-hidden="true"></div>
-      <button class="mac-menu-btn" id="mac-menu-btn" aria-expanded="false" aria-controls="mac-links"><span>Menu</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
       <div class="mac-links" id="mac-links">
         <a href="/" aria-current="page">Home</a>
         <a href="projects">Projects</a>
@@ -626,15 +622,6 @@
         else hl.style.opacity = '0';
       });
       window.addEventListener('resize', ()=>{ const cur = ml.querySelector('a[aria-current="page"]'); if(cur) place(cur); });
-    }
-    const menuBtn = document.getElementById('mac-menu-btn');
-    if(menuBtn){
-      const macNav = menuBtn.closest('.mac-nav');
-      menuBtn.addEventListener('click', ()=>{
-        const open = macNav.classList.toggle('open');
-        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-      if(ml){ ml.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=>{ macNav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); })); }
     }
     const hint = document.getElementById('scroll-hint');
     if(hint){
