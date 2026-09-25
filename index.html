@@ -48,7 +48,7 @@
       gap:24px 32px;
       align-items:center;
       padding:84px 0 32px;
-      min-height:92vh;
+      min-height:calc(100vh - 10px);
       position:relative;
       overflow:visible;
     }
@@ -490,6 +490,10 @@
       .status{display:none}
       .scroll-hint{display:none}
     }
+    /* desktop: scale bh so hero ends just below the fold */
+    @media(min-width:701px){
+      .hero-bh{width:min(800px,calc(100vh - 100px)); height:min(800px,calc(100vh - 100px))}
+    }
     a:focus-visible{outline:1px solid rgba(255,255,255,0.5); outline-offset:3px}
   </style>
 </head>
@@ -534,7 +538,7 @@
       <hr class="hero-rule">
     </header>
 
-    <nav class="mac-nav reveal" aria-label="Primary" style="margin-top:72px">
+    <nav class="mac-nav reveal" aria-label="Primary" style="margin-top:40px">
       <div class="mac-highlight" id="mac-highlight" aria-hidden="true"></div>
       <div class="mac-links" id="mac-links">
         <a href="/" aria-current="page">Home</a>
